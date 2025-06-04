@@ -1,6 +1,10 @@
 torch==2.0.1
 torchvision==0.15.2
 opencv-python==4.8.0.76
-numpy==1.24.4
-pillow==10.0.0
+numpy~=2.1.2
+pillow~=11.0.0
 imageio==2.37.0
+matplotlib~=3.7.0
+scikit-learn~=1.6.1
+tqdm~=4.67.1
+seaborn~=0.13.2
