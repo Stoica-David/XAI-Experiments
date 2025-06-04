@@ -12,7 +12,8 @@ project_root = os.path.dirname(os.path.abspath(__file__))
 
 img_path = os.path.join(project_root, r"_data/datasets/test/dog.0.jpg")
 cam_type = "gradCAM"  # Choose from: "gradCAM", "gradCAM++", "scoreCAM"
-output_path = f"{cam_type}_aggregated.png"
+output_path = os.path.join(project_root, f"{cam_type}_simple-average.png")
+os.makedirs(output_path, exist_ok=True)
 
 
 def get_cam_class(cam_type):

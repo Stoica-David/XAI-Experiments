@@ -13,7 +13,8 @@ project_root = os.path.dirname(os.path.abspath(__file__))
 
 IMAGE_PATH = os.path.join(project_root, r"_data/datasets/test/dog.0.jpg")
 CAM_TYPE = "gradCAM"  # Options: "gradCAM", "gradCAM++", "scoreCAM"
-OUTPUT_IMAGE = f"pca_fused_{CAM_TYPE}.png"
+OUTPUT_IMAGE = os.path.join(project_root, f"{CAM_TYPE}_PCA-fusion.png")
+
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 N_COMPONENTS = 1
 

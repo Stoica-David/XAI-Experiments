@@ -13,7 +13,9 @@ project_root = os.path.dirname(os.path.abspath(__file__))
 METHOD = "gradCAM"  # Options: "gradCAM", "gradCAM++", "scoreCAM"
 IMAGE_PATH = os.path.join(project_root, r"_data/datasets/test/dog.0.jpg")
 
-OUTPUT_PATH = f"{METHOD}_max_pooled.png"
+OUTPUT_PATH = os.path.join(project_root, f"{METHOD}_max-pooling.png")
+os.makedirs(OUTPUT_PATH, exist_ok=True)
+
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 model = models.alexnet(pretrained=True).to(DEVICE)
