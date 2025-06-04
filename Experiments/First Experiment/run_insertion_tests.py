@@ -6,31 +6,32 @@ import torchvision.models as models
 import matplotlib.pyplot as plt
 import os
 
-CUR_DIR = os.getcwd()
 
-image_path = os.path.join(CUR_DIR, r"datasets/test/dog.0.jpg")
+project_root = os.path.dirname(os.path.abspath(__file__))
+
+image_path = os.path.join(project_root, r"_data/datasets/test/dog.0.jpg")
 
 heatmap_paths = [
     # GradCAM
-    os.path.join(CUR_DIR, r'_data/heatmaps/Feature attribution/gradCAM_PCA-fusion.png'),
-    os.path.join(CUR_DIR, r'_data/heatmaps/Feature attribution/gradCAM_simple-average.png'),
-    os.path.join(CUR_DIR, r'_data/heatmaps/Feature attribution/gradCAM_max-pooling.png'),
-    os.path.join(CUR_DIR, r'_data/heatmaps/Feature attribution/gradCAM_weighted-average.png'),
+    os.path.join(project_root, r'_data/heatmaps/Feature attribution/gradCAM_PCA-fusion.png'),
+    os.path.join(project_root, r'_data/heatmaps/Feature attribution/gradCAM_simple-average.png'),
+    os.path.join(project_root, r'_data/heatmaps/Feature attribution/gradCAM_max-pooling.png'),
+    os.path.join(project_root, r'_data/heatmaps/Feature attribution/gradCAM_weighted-average.png'),
 
     # GradCAM++
-    os.path.join(CUR_DIR, r'_data/heatmaps/Feature attribution/gradCAM++_PCA-fusion.png'),
-    os.path.join(CUR_DIR, r'_data/heatmaps/Feature attribution/gradCAM++_simple-average.png'),
-    os.path.join(CUR_DIR, r'_data/heatmaps/Feature attribution/gradCAM++_max-pooling.png'),
-    os.path.join(CUR_DIR, r'_data/heatmaps/Feature attribution/gradCAM++_weighted-average.png'),
+    os.path.join(project_root, r'_data/heatmaps/Feature attribution/gradCAM++_PCA-fusion.png'),
+    os.path.join(project_root, r'_data/heatmaps/Feature attribution/gradCAM++_simple-average.png'),
+    os.path.join(project_root, r'_data/heatmaps/Feature attribution/gradCAM++_max-pooling.png'),
+    os.path.join(project_root, r'_data/heatmaps/Feature attribution/gradCAM++_weighted-average.png'),
 
     # ScoreCAM
-    os.path.join(CUR_DIR, r'_data/heatmaps/Feature attribution/scoreCAM_PCA-fusion.png'),
-    os.path.join(CUR_DIR, r'_data/heatmaps/Feature attribution/scoreCAM_simple-average.png'),
-    os.path.join(CUR_DIR, r'_data/heatmaps/Feature attribution/scoreCAM_max-pooling.png'),
-    os.path.join(CUR_DIR, r'_data/heatmaps/Feature attribution/scoreCAM_weighted-average.png'),
+    os.path.join(project_root, r'_data/heatmaps/Feature attribution/scoreCAM_PCA-fusion.png'),
+    os.path.join(project_root, r'_data/heatmaps/Feature attribution/scoreCAM_simple-average.png'),
+    os.path.join(project_root, r'_data/heatmaps/Feature attribution/scoreCAM_max-pooling.png'),
+    os.path.join(project_root, r'_data/heatmaps/Feature attribution/scoreCAM_weighted-average.png'),
 ]
 
-output_dir = os.path.join(CUR_DIR, r'_results/insetion-tests')
+output_dir = os.path.join(project_root, r'_results/insetion-tests')
 os.makedirs(output_dir, exist_ok=True)
 steps = 20
 

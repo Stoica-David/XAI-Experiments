@@ -1,0 +1,23 @@
+Train Loss measures how well the model is fitting the training data during each epoch.
+It’s calculated using the CrossEntropyLoss, which quantifies the difference between the predicted and actual class labels.
+A decreasing train loss typically indicates that the model is learning and minimizing error on the training set.
+
+Validation Loss reflects the model's performance on unseen data (a subset of the training dataset not used for weight updates).
+Like train loss, it uses the CrossEntropyLoss function.
+ Monitoring validation loss helps identify overfitting; if it starts increasing while train loss continues to decrease, the model may be memorizing rather than generalizing.
+
+Train Accuracy is the proportion of correct predictions made by the model on the training set.
+ It gives a quick view of how well the model is learning the specific examples it was trained on.
+ High train accuracy suggests good learning, but without high validation accuracy, it may mean overfitting.
+
+Validation Accuracy indicates how accurately the model predicts the labels of the validation set.
+It serves as a key generalization metric: if it increases alongside train accuracy, the model is learning meaningful patterns rather than overfitting.
+
+F1 Macro Score is the average of the F1 scores for each class, treating each class equally regardless of support (number of samples).
+It balances precision and recall across both classes and is especially useful when both classes are equally important, even if class distribution is uneven.
+
+F1 Binary Score computes the F1 score for the positive class only (typically class 1).
+It focuses on the model’s ability to correctly detect one specific class, making it useful when one class (e.g., detecting dogs over cats) is of more interest or importance.
+
+Confusion Matrix provides a detailed breakdown of prediction results, showing the number of true positives, false positives, true negatives, and false negatives for each class.
+ It’s useful for identifying specific types of errors, such as confusing one class for another, and offers a deeper view of model performance beyond simple accuracy.

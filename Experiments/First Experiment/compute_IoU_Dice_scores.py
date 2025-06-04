@@ -2,11 +2,12 @@ import numpy as np
 import cv2
 import os
 
-CUR_DIR = os.getcwd()
 
-image_path = os.path.join(CUR_DIR, r"_data/datasets/test/dog.0.jpg")
-segmentation_mask_path = os.path.join(CUR_DIR, r'_data/dog_segmentation_mask.jpg')
-heatmaps_dir = os.path.join(CUR_DIR, r'_data/heatmaps/Feature attribution')
+project_root = os.path.dirname(os.path.abspath(__file__))
+
+image_path = os.path.join(project_root, r"_data/datasets/test/dog.0.jpg")
+segmentation_mask_path = os.path.join(project_root, r'_data/dog_segmentation_mask.jpg')
+heatmaps_dir = os.path.join(project_root, r'_data/heatmaps/Feature attribution')
 
 threshold_value = 0.5  # Threshold for Grad-CAM heatmap
 

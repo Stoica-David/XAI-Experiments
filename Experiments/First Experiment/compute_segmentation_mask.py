@@ -7,7 +7,8 @@ import cv2
 import matplotlib.pyplot as plt
 import os
 
-CUR_DIR = os.getcwd()
+
+project_root = os.path.dirname(os.path.abspath(__file__))
 
 # COCO class index for 'dog'
 DOG_CLASS_ID = 18
@@ -55,7 +56,7 @@ def get_dog_segmentation_mask(image_path):
 
 
 # Example usage
-image_path = os.path.join(CUR_DIR, r"datasets/test/dog.0.jpg")
+image_path = os.path.join(project_root, r"_data/datasets/test/dog.0.jpg")
 dog_mask = get_dog_segmentation_mask(image_path)
 
 # Show the mask
