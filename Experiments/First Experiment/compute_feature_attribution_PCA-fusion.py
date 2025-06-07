@@ -8,8 +8,8 @@ from pytorch_grad_cam import GradCAM, GradCAMPlusPlus, ScoreCAM
 from pytorch_grad_cam.utils.image import preprocess_image
 import os
 
+from retrieve_project_root import project_root
 
-project_root = os.path.dirname(os.path.abspath(__file__))
 
 IMAGE_PATH = os.path.join(project_root, r"_data/datasets/test/dog.0.jpg")
 CAM_TYPE = "gradCAM"  # Options: "gradCAM", "gradCAM++", "scoreCAM"

@@ -9,8 +9,8 @@ from tqdm import tqdm
 from pytorch_grad_cam import GradCAM
 from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
 
+from retrieve_project_root import project_root
 
-project_root = os.path.dirname(os.path.abspath(__file__))
 
 input_dir = os.path.join(project_root, r"_data/datasets/train")
 output_dir = os.path.join(project_root, r"_data/datasets/6) CAM deletion")

@@ -7,8 +7,8 @@ import cv2
 import matplotlib.pyplot as plt
 import os
 
+from retrieve_project_root import project_root
 
-project_root = os.path.dirname(os.path.abspath(__file__))
 
 # COCO class index for 'dog'
 DOG_CLASS_ID = 18

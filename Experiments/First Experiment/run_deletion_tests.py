@@ -6,8 +6,8 @@ import torchvision.models as models
 import matplotlib.pyplot as plt
 import os
 
+from retrieve_project_root import project_root
 
-project_root = os.path.dirname(os.path.abspath(__file__))
 
 image_path = os.path.join(project_root, r"_data/datasets/test/dog.0.jpg")
 

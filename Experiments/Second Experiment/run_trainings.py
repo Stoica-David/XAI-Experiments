@@ -15,8 +15,8 @@ from tqdm import tqdm
 import json
 from datetime import datetime
 
+from retrieve_project_root import project_root
 
-project_root = os.path.dirname(os.path.abspath(__file__))
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")

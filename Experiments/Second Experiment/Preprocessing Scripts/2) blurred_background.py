@@ -7,8 +7,8 @@ import numpy as np
 import cv2
 from tqdm import tqdm
 
+from retrieve_project_root import project_root
 
-project_root = os.path.dirname(os.path.abspath(__file__))
 
 TARGET_IDS = [17, 18]
 input_dir = os.path.join(project_root, r"_data/datasets/train")

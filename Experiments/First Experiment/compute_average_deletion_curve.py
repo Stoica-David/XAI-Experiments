@@ -2,8 +2,8 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
+from retrieve_project_root import project_root
 
-project_root = os.path.dirname(os.path.abspath(__file__))
 
 # Folder containing all saved .npy score files
 input_dir = os.path.join(project_root, r'_results/deletion-tests')
